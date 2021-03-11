@@ -24,6 +24,13 @@ version = '2.0.0'
 hex-literal = { optional = true, version = '0.3.1' }
 serde = { features = ['derive'], optional = true, version = '1.0.119' }
 
+#importing nicks pallet
+pallet-nicks = {default-features = false, version ='3.0.0'}
+
+# #contracts pallet dependencies (also pallet-balances but already included below)
+# pallet-contracts = {version='2.0.0', default_features = false}
+# pallet-contracts-primitives = {version = '2.0.0', default_features = false}
+
 # local dependencies
 pallet-template = { path = '../pallets/template', default-features = false, version = '3.0.0' }
 
@@ -93,4 +100,7 @@ std = [
     'sp-std/std',
     'sp-transaction-pool/std',
     'sp-version/std',
+    'pallet-nicks/std',
+    # 'pallet-contracts/std',
+    # 'pallet-contracts-primitives/std',
 ]
